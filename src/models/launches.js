@@ -18,7 +18,6 @@ Launches.prototype.getData = function () {
   myPromise.then((data) => {
     this.data = data;
     PubSub.publish('Launches:launch-data-loaded', this.data);
-    console.dir(this.data);
   })
   .catch((error) => {
     console.error(error);
