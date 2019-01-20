@@ -8,7 +8,9 @@ this.element = element;
 
 FilterView.prototype.bindEvents = function () {
   this.element.addEventListener('change', (event) => {
-    PubSub.publish('FilterView:filter-by', event.target.value);
+    const launchList = document.querySelector('#launch-list');
+    launchList.innerHTML = '';
+    PubSub.publish('FilterView:change', event.target.value);
   });
 };
 
