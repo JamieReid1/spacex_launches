@@ -13,7 +13,11 @@ let launchContainer;
 LaunchView.prototype.render = function () {
   launchContainer = document.createElement('div');
   launchContainer.setAttribute('class', 'launch');
-  this.createImgElement(`${this.launch.links.mission_patch}`, 200, 200);
+  if (!this.launch.links.mission_patch) {
+    this.createImgElement(`https://akm-img-a-in.tosshub.com/indiatoday/spacex-647_121617124831_1.jpg?Fj881CJX5BCa8tEq.g73QQw6FI4124UV`, 200, 200);
+  } else {
+    this.createImgElement(`${this.launch.links.mission_patch}`, 200, 200);
+  };
   this.createH3Element(`Mission Name: ${this.launch.mission_name}`);
   this.createH3Element(`Rocket Name: ${this.launch.rocket.rocket_name}`);
   this.createH3Element(`Rocket Type: ${this.launch.rocket.rocket_type}`);

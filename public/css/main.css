@@ -1,14 +1,56 @@
+body {
+  background-image: url('https://icdn3.digitaltrends.com/image/spacex-launches-falcon-9-rocket-vandenberg-air-force-base-5-640x640.jpg');
+  background-repeat: no-repeat;
+  background-size: 1280px 620px;
+  background-attachment: fixed;
+  color: black;
+  font-family: monospace;
+}
+
 .launch {
-  border: 1px solid black;
-  margin: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 10px;
   padding: 10px;
   /* text-align: center; */
+  max-width: 570px;
+  min-width: 570px;
+  font-size: 14px;
+}
+
+#launch-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #payload-list {
   display: flex;
   flex-direction: row;
-  /* text-align: center; */
+  /* justify-content: center; */
+}
+
+img {
+  border-radius: 10px;
+}
+
+h1 {
+  color: white;
+}
+
+label {
+  color: white;
+}
+
+select {
+  background-color: black;
+  color: white;
+}
+
+option {
+  color: white;
 }
 
 h3 {
@@ -23,7 +65,11 @@ p {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 li {
   list-style-type: none;
-  /* align-self: center; */
 }

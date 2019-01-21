@@ -15,7 +15,7 @@ LaunchListView.prototype.bindEvents = function () {
   PubSub.subscribe('Launches:launch-data-loaded', (event) => {
     launches = event.detail;
     console.dir(launches);
-    
+
   })
   PubSub.subscribe('SelectView:change', (event) => {
     value = event.detail.target.value;
@@ -42,6 +42,9 @@ LaunchListView.prototype.render = function (launches, value) {
       const selectedLaunch = new LaunchView(this.container, launch);
       selectedLaunch.render();
     } else if (type.includes(value)) {
+      const selectedLaunch = new LaunchView(this.container, launch);
+      selectedLaunch.render();
+    } else if (allCustomers.includes(value)) {
       const selectedLaunch = new LaunchView(this.container, launch);
       selectedLaunch.render();
     } else if (allOrbits.includes(value)) {
