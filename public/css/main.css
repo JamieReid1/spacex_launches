@@ -1,0 +1,29 @@
+.launch {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+  /* text-align: center; */
+}
+
+#payload-list {
+  display: flex;
+  flex-direction: row;
+  /* text-align: center; */
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+  /* align-self: center; */
+}
